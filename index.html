@@ -1145,12 +1145,12 @@ property array MAY contain multiple JSON objects:
     "entity": "did:example:z9f823hdf783h78fh2378"
   }, {
     // this entity may update the authenticationCredential field in this
-    // DID Document as long as they authenticate with RsaSignature2017
+    // DID Document as long as they authenticate with ES256 RFC7518
     "permission": "UpdateDidDocument",
     "entity": "did:example:abvd73h285jf73hd73",
     "field": ["authenticationCredential"],
     "permittedProofType": [{
-      "proofType": "RsaSignature2017"
+      "proofType": "ES256"
     }]
   }]
 }
@@ -1182,7 +1182,7 @@ property array MAY contain a single JSON object:
     "permission": "UpdateDidDocument",
     "field": ["authenticationCredential", "writeAuthorization"],
     "permittedProofType": [{
-      "proofType": "RsaSignature2017",
+      "proofType": "ES256",
       "minimumSignatures": 3,
       "authenticationCredential": [{
         "id": "did:example:304ebc3e-7997-4bf4-a915-dd87e8455941#keys-123",
@@ -2156,12 +2156,12 @@ https://github.com/WebOfTrustInfo/rebooting-the-web-of-trust-fall2016/blob/maste
     "entity": "did:v1:215cb1dc-1f44-4695-a07f-97649cad9938"
   }, {
     // this entity may update the authenticationCredential field in this
-    // DID Document as long as they authenticate with RsaSignature2017
+    // DID Document as long as they authenticate with ES256 RFC7518
     "entity": "did:v1:b5f8c320-f7ca-4869-85e6-a1bcbf825b2a",
     "permission": "UpdateDidDocument",
     "field": ["authenticationCredential"],
     "permittedProofType": [{
-      "proofType": "RsaSignature2017"
+      "proofType": "ES256"
     }]
   }, {
     // anyone may update the authenticationCredential and writeAuthorization
@@ -2169,7 +2169,7 @@ https://github.com/WebOfTrustInfo/rebooting-the-web-of-trust-fall2016/blob/maste
     "permission": "UpdateDidDocument",
     "field": ["authenticationCredential", "writeAuthorization"],
     "permittedProofType": [{
-      "proofType": "RsaSignature2017",
+      "proofType": "ES256",
       "minimumSignatures": 3,
       "authenticationCredential": [{
         "id": "did:v1:304ebc3e-7997-4bf4-a915-dd87e8455941#keys-123",
@@ -2194,7 +2194,7 @@ https://github.com/WebOfTrustInfo/rebooting-the-web-of-trust-fall2016/blob/maste
     "permission": "IssueCredential",
     "entity": "did:example:123456789abcdefghi",
     "permittedProofType": [{
-      "proofType": "RsaSignature2017",
+      "proofType": "ES256",
       "authenticationCredential": [{
         "id": "did:example:123456789abcdefghi#keys-1",
         "type": "RsaCryptographicKey",
@@ -2291,6 +2291,9 @@ Move these to localBiblio, update refs, and/or remove as needed.
       [RFC 6973] Privacy Considerations for Internet Protocols. IETF RFC 6973.
         <a href=
 "https://tools.ietf.org/html/rfc6973">https://tools.ietf.org/html/rfc6973</a>
+
+      [RFC 7518] JSON Web Algorithms (JWA)
+         <a href="https://tools.ietf.org/html/rfc7518">https://tools.ietf.org/html/rfc7518</a>
 
       [RFC-KEYWORDS] Key words for use in RFCs to Indicate Requirement Levels. IETF RFC 2119.
         <a href=
